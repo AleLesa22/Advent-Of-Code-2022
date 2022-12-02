@@ -3,41 +3,65 @@
     private static void Main(string[] args)
     {
         string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
-        Console.WriteLine("Contents of Elfs.txt = ");
+        Console.WriteLine("Contents of RockPaperScissorsTournament.txt = ");
 
-        int sum = 0;
-        int max = int.MinValue;
+        int totalScoreOfRounds = 0;
+        int totalSumOfEveryRound = 0;
 
         List<int> Elves = new List<int>();
 
         foreach (string line in lines)
         {
             Console.WriteLine("\t" + line);
-            if (string.IsNullOrEmpty(line))
+            if (line == "A X")
             {
-                Elves.Add(sum);
-                sum = 0;
+                totalScoreOfRounds = 1 + 3;
+                totalSumOfEveryRound += totalScoreOfRounds;
             }
-            else
+            else if (line == "A Y")
             {
-                sum += Convert.ToInt32(line);
+                totalScoreOfRounds = 2 + 6;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "A Z")
+            {
+                totalScoreOfRounds = 3 + 0;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "B X")
+            {
+                totalScoreOfRounds = 1 + 0;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "B Y")
+            {
+                totalScoreOfRounds = 2 + 3;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "B Z")
+            {
+                totalScoreOfRounds = 3 + 6;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "C X")
+            {
+                totalScoreOfRounds = 1 + 6;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "C Y")
+            {
+                totalScoreOfRounds = 2 + 0;
+                totalSumOfEveryRound += totalScoreOfRounds;
+            }
+            else if (line == "C Z")
+            {
+                totalScoreOfRounds = 3 + 3;
+                totalSumOfEveryRound += totalScoreOfRounds;
             }
         }
 
-        for (int i = 0; i < Elves.Count; i++)
-        {
-            if (Elves[i] > max)
-            {
-                max = Elves[i];
-            }
-        }
-        Console.WriteLine(max);
-
-
-        //SumOfTopThreeElves
-        var sumOfTopThree = Elves.OrderByDescending(x => x).Take(3).Sum();
-        Console.WriteLine("The sum of calories carried by the top three elves:");
-        Console.WriteLine(sumOfTopThree);
+        Console.WriteLine("The sum of points foreach round:");
+        Console.WriteLine(totalSumOfEveryRound);
         Console.ReadLine();
     }
 }
