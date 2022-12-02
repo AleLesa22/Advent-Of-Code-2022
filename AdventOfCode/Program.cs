@@ -15,17 +15,17 @@
             Console.WriteLine("\t" + line);
             if (line == "A X")
             {
-                totalScoreOfRounds = 1 + 3;
+                totalScoreOfRounds = 3 + 0;
                 totalSumOfEveryRound += totalScoreOfRounds;
             }
             else if (line == "A Y")
             {
-                totalScoreOfRounds = 2 + 6;
+                totalScoreOfRounds = 1 + 3;
                 totalSumOfEveryRound += totalScoreOfRounds;
             }
             else if (line == "A Z")
             {
-                totalScoreOfRounds = 3 + 0;
+                totalScoreOfRounds = 2 + 6;
                 totalSumOfEveryRound += totalScoreOfRounds;
             }
             else if (line == "B X")
@@ -45,17 +45,17 @@
             }
             else if (line == "C X")
             {
-                totalScoreOfRounds = 1 + 6;
+                totalScoreOfRounds = 2 + 0;
                 totalSumOfEveryRound += totalScoreOfRounds;
             }
             else if (line == "C Y")
             {
-                totalScoreOfRounds = 2 + 0;
+                totalScoreOfRounds = 3 + 3;
                 totalSumOfEveryRound += totalScoreOfRounds;
             }
             else if (line == "C Z")
             {
-                totalScoreOfRounds = 3 + 3;
+                totalScoreOfRounds = 1 + 6;
                 totalSumOfEveryRound += totalScoreOfRounds;
             }
         }
