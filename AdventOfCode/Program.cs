@@ -8,8 +8,6 @@
         int totalScoreOfRounds = 0;
         int totalSumOfEveryRound = 0;
 
-        List<int> Elves = new List<int>();
-
         foreach (string line in lines)
         {
             Console.WriteLine("\t" + line);
