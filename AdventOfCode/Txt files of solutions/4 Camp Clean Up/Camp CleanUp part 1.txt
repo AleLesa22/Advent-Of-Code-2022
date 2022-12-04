@@ -1,8 +1,4 @@
-﻿internal class Program
-{
-    private static void Main(string[] args)
-    {
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
+string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
 
         int result = 0;
 
@@ -20,7 +16,8 @@
             int startingSectionOfSecondElf = int.Parse(secondElf.Split('-')[0]);
             int endSectionOfSecondElf = int.Parse(secondElf.Split('-')[1]);
 
-            if (startingSectionOfFirstElf <= endSectionOfSecondElf && endSectionOfFirstElf >= startingSectionOfSecondElf)
+            if ((startingSectionOfFirstElf <= startingSectionOfSecondElf && endSectionOfSecondElf <= endSectionOfFirstElf)
+                || (startingSectionOfSecondElf <= startingSectionOfFirstElf && endSectionOfFirstElf <= endSectionOfSecondElf))
             {
                 result++;
             }
@@ -28,5 +25,3 @@
 
         Console.WriteLine(result);
         Console.ReadLine();
-    }
-}
