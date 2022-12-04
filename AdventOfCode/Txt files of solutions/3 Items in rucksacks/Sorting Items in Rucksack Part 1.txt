@@ -1,8 +1,4 @@
-﻿internal class Program
-{
-    private static void Main(string[] args)
-    {
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
+string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
         Console.WriteLine("Contents of Rucksack.txt = ");
 
         int result = 0;
@@ -107,6 +103,3 @@
 
         Console.WriteLine(result);
         Console.ReadLine();
-
-    }
-}
