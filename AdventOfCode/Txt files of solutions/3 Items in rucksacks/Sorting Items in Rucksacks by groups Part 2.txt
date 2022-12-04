@@ -1,9 +1,4 @@
-﻿internal class Program
-{
-    private static void Main(string[] args)
-    {
-        string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
-
+string[] lines = System.IO.File.ReadAllLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
 
         Console.WriteLine("Contents of Rucksack.txt = ");
 
@@ -104,50 +99,3 @@
         }
         Console.WriteLine(result);
         Console.ReadLine();
-
-
-
-        //foreach (string line in lines)
-        //{
-        //    set.Clear();
-        //    var firstHalfLength = (int)(line.Length / 2);
-        //    var secondHalfLength = line.Length - firstHalfLength;
-
-        //    var firstLineToCompare = line.Substring(0, firstHalfLength);
-        //    var secondLineToCompare = line.Substring(firstHalfLength, secondHalfLength);
-
-        //    foreach (char c in firstLineToCompare)
-        //    {
-        //        if (secondLineToCompare.Contains(c))
-        //        {
-        //            if (UppercaseLetters.ContainsKey(c))
-        //            {
-        //                if (set.Contains(c))
-        //                {
-        //                    continue;
-        //                }
-        //                var keyOfLetter = UppercaseLetters.Single(x => x.Key == c);
-        //                int valueOfLetter = keyOfLetter.Value;
-        //                result += valueOfLetter;
-        //                set.Add(c);
-        //            }
-        //            else
-        //            {
-        //                if (set.Contains(c))
-        //                {
-        //                    continue;
-        //                }
-        //                var keyOfLetter = LowercaseLetters.Single(x => x.Key == c);
-        //                int valueOfLetter = keyOfLetter.Value;
-        //                result += valueOfLetter;
-        //                set.Add(c);
-        //            }
-        //        }
-        //    }
-        //}
-
-        //Console.WriteLine(result);
-        //Console.ReadLine();
-
-    }
-}
