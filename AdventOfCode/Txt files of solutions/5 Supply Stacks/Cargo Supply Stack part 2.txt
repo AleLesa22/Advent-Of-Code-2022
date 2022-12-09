@@ -1,8 +1,4 @@
-﻿internal class Program
-{
-    private static void Main(string[] args)
-    {
-        var lines = File.ReadLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
+var lines = File.ReadLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
 
         var stacks = new List<Stack<char>>()
         {
@@ -51,6 +47,3 @@
 
         Console.WriteLine(result);
         Console.ReadLine();
-
-    }
-}
