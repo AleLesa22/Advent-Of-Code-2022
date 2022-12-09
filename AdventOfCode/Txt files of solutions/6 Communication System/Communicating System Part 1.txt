@@ -1,0 +1,25 @@
+var lines = File.ReadLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
+        List<char> chars = new List<char>();
+
+        foreach (var line in lines)
+        {
+            for (int i = 0; i < line.Length; i++)
+            {
+                chars.Add(line[i]);
+            }
+
+            for (int i = 0; i < chars.Count; i++)
+            {
+                char a = chars[i];
+                char b = chars[i + 1];
+                char c = chars[i + 2];
+                char d = chars[i + 3];
+
+                if (a != b && a != c && a != d && b != c && b != d && c != d)
+                {
+                    Console.WriteLine(i + 3 + 1);
+                    break;
+                }
+            }
+        }
+        Console.ReadLine();

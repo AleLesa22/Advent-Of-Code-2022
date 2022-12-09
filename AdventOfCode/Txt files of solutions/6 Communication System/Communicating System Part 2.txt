@@ -1,8 +1,4 @@
-﻿internal class Program
-{
-    private static void Main(string[] args)
-    {
-        var lines = File.ReadLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
+var lines = File.ReadLines(@"C:\Users\avidakovic\Desktop\keynotes.txt");
         List<char> chars = new List<char>();
 
         foreach (var line in lines)
@@ -55,5 +51,3 @@
             }
         }
         Console.ReadLine();
-    }
-}
